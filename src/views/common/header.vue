@@ -124,13 +124,13 @@ export default {
       var span = document.querySelector('.navBtn').children;
       if(!this.showList){
         span[0].style="top:30px;transform: rotate(45deg);"
-        span[1].style="display:none"
+        span[1].style="display:none";
         span[2].style="top:30px;transform: rotate(-45deg);"
         this.showList = true;
       }else{
-        span[0].style=""
-        span[1].style=""
-        span[2].style=""
+        span[0].style="";
+        span[1].style="";
+        span[2].style="";
         this.showList = false;
       }
     }
@@ -177,13 +177,29 @@ export default {
     }
   }
   .navList{
-    width:40%;
+    width:50%;
     position: absolute;
     top:60px;
     left:0px;
     z-index: 9999;
     .el-menu-vertical-demo{
       text-align: center;
+    }
+  }
+}
+</style>
+<style lang="less">
+.el-menu-vertical-demo{
+  .el-submenu{
+    .el-menu{
+      .el-menu-item-group{
+        .el-menu-item{
+          padding: 0!important;
+          width: 100%;
+          min-width: 0;
+          text-align: center;
+        }
+      }
     }
   }
 }
